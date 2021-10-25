@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<section class="main">
+    <h1>Task Manager</h1>
+    <p id="description">description of the project</p>
+</section>
+<section class="tasksSection">
+    <input placeholder="enter name" type="text" class="name" name="tasks">
+
+    <input placeholder="add a task" type="text" class="task" name="tasks">
+    <button id="enter">enter</button>
+    <ul class="tasksList">
+        <% for(var i=0; i<tasks.length; i++) {%>
+            <li class="message">
+                <span>
+                    <%=tasks[i].name%>
+                </span>
+                <span>
+                    <%=tasks[i].taskInfo%>
+                </span>
+                <span>
+                    <%=tasks[i]._id%>
+                </span>
+                <button class="delete" data-id= "<%=tasks[i]._id%>">delete</button>
+            </li>
+            <% } %>
+    </ul>
+</section>
+
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
